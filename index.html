@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .curso {
+      background-color: #ffffff;
+      border: 2px solid #2d89ef;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      cursor: pointer;
+      width: fit-content;
+    }
+    .info {
+      display: none;
+      margin-top: 10px;
+      background-color: #e7f0ff;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+  <script>
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>Malla Curricular - Medicina</h1>
+
+  <div class="curso" onclick="toggle('info1')">Anatomía I</div>
+  <div id="info1" class="info">
+    Semestre: 1º<br>
+    Contenido: Osteología, miología, neuroanatomía básica
+  </div>
+
+  <div class="curso" onclick="toggle('info2')">Fisiología General</div>
+  <div id="info2" class="info">
+    Semestre: 2º<br>
+    Contenido: Función celular, renal, respiratoria y cardiovascular
+  </div>
+
+  <div class="curso" onclick="toggle('info3')">Farmacología</div>
+  <div id="info3" class="info">
+    Semestre: 4º<br>
+    Contenido: Principios básicos de farmacocinética y farmacodinamia
+  </div>
+</body>
+</html>
